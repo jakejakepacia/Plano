@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var clickCount = 0
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
@@ -15,9 +16,19 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
 
-                Text("Welcome to your app 👗")
+                Text("Welcome to your Plano app")
                     .font(.subheadline)
                     .foregroundColor(.gray)
+                
+                Button(action    : {
+                    clickCount += 1
+                }) {
+                    Text("Clicked \(clickCount) times")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                }
             }
             .padding()
             .navigationTitle("Home")
