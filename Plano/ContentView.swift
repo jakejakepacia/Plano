@@ -16,7 +16,7 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
 
-                Text("Welcome to your app 👗")
+                Text("Welcome to your Plano app")
                     .font(.subheadline)
                     .foregroundColor(.gray)
                 
