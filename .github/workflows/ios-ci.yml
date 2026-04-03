@@ -1,15 +1,9 @@
-#
-//  ios-ci.yml
-//  Plano
-//
-//  Created by Christien Jake Pacia on 4/3/26.
-//
-
 name: iOS CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
   build-and-test:
@@ -26,4 +20,6 @@ jobs:
         run: |
           xcodebuild clean test \
           -scheme DressRentalApp \
-          -destination 'platform=iOS Simulator,name=iPhone 15'
+          -destination 'platform=iOS Simulator,name=iPhone 14' \
+          -sdk iphonesimulator \
+          -configuration Debug
