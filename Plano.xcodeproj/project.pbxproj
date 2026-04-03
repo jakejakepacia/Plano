@@ -27,6 +27,7 @@
 		E8B7FC942F7F9737002FF1BE /* Plano.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plano.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B7FCA12F7F9738002FF1BE /* PlanoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B7FCAB2F7F9738002FF1BE /* PlanoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8B7FCC02F7F9D23002FF1BE /* ios-ci.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "ios-ci.yml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +76,7 @@
 		E8B7FC8B2F7F9737002FF1BE = {
 			isa = PBXGroup;
 			children = (
+				E8B7FCBE2F7F9D11002FF1BE /* .github */,
 				E8B7FC962F7F9737002FF1BE /* Plano */,
 				E8B7FCA42F7F9738002FF1BE /* PlanoTests */,
 				E8B7FCAE2F7F9738002FF1BE /* PlanoUITests */,
@@ -90,6 +92,22 @@
 				E8B7FCAB2F7F9738002FF1BE /* PlanoUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E8B7FCBE2F7F9D11002FF1BE /* .github */ = {
+			isa = PBXGroup;
+			children = (
+				E8B7FCBF2F7F9D1B002FF1BE /* workflows */,
+			);
+			path = .github;
+			sourceTree = "<group>";
+		};
+		E8B7FCBF2F7F9D1B002FF1BE /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				E8B7FCC02F7F9D23002FF1BE /* ios-ci.yml */,
+			);
+			path = workflows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
