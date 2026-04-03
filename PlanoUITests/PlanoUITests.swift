@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import Plano
 
 final class PlanoUITests: XCTestCase {
 
@@ -36,6 +37,13 @@ final class PlanoUITests: XCTestCase {
         // This measures how long it takes to launch your application.
         measure(metrics: [XCTApplicationLaunchMetric()]) {
             XCUIApplication().launch()
+        }
+    }
+    
+    final class ContentViewTest: XCTestCase {
+        func testInitialClickCount(){
+            let view = ContentView()
+            XCTAssertEqual(view.clickCount, 0)
         }
     }
 }
