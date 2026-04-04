@@ -22,28 +22,4 @@ final class PlanoUITests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    @MainActor
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    @MainActor
-    func testLaunchPerformance() throws {
-        // This measures how long it takes to launch your application.
-        measure(metrics: [XCTApplicationLaunchMetric()]) {
-            XCUIApplication().launch()
-        }
-    }
-    
-    func testInitialClickCount() {
-            // You can't access @State directly; test logic through a ViewModel if needed
-            // For demo, just test default initialization
-            var clickCount = 0
-            XCTAssertEqual(clickCount, 0)
-    }
 }

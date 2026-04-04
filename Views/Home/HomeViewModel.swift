@@ -11,8 +11,20 @@ internal import Combine
 
 final class HomeViewModel: ObservableObject {
     @Published var title: String = "Home"
-
-    func loadData() {
-        // call service here
+    @Published var events: [PlanoEvent] = []
+    
+    init(){
+        loadEvents()
     }
+    
+    func loadEvents(){
+        events = PlanoEvent.sampleData
+    }
+    
+    func saveEvents(_ event: PlanoEvent){
+        events.append(event)
+        LocalStorageService.shared.saveEvents(events)
+    }
+    
+    
 }

@@ -7,11 +7,39 @@
 import SwiftUI
 struct HomeView: View {
     @StateObject private var vm = HomeViewModel()
-
+    @State private var showAddEvent = false
+    @State private var selectedEvent: PlanoEvent?
+    
     var body: some View {
-        VStack {
-            Text(vm.title)
-                .font(.title)
+        NavigationStack {
+            ScrollView {
+                LazyVStack(spacing: 16) {
+                    ForEach(vm.events) { event in
+                        NavigationLink {
+                            EventDetailsView(event: event)
+                                .toolbar(.hidden, for: .tabBar)
+                        } label: {
+                            EventCardView(event: event)
+                        }
+                        .buttonStyle(.plain) // removes default blue highlight
+                        .padding(.horizontal)
+                    }
+                }
+                .padding(.top)
+            }
+            .navigationTitle("Events")
+            .toolbar {
+                Button {
+                    showAddEvent = true
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
+            .sheet(isPresented: $showAddEvent) {
+                NavigationStack {
+                    AddEventView(vm: vm)
+                }
+            }
         }
     }
 }

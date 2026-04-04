@@ -12,6 +12,15 @@
 		E8B7FCD22F809156002FF1BE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCCC2F808F63002FF1BE /* HomeViewModel.swift */; };
 		E8B7FCD32F809186002FF1BE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCCB2F808F20002FF1BE /* ProfileView.swift */; };
 		E8B7FCD42F80918B002FF1BE /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCCD2F808F7F002FF1BE /* ProfileViewModel.swift */; };
+		E8B7FCD92F80933F002FF1BE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCD82F80933C002FF1BE /* SearchView.swift */; };
+		E8B7FCDF2F8098A7002FF1BE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCDE2F8098A3002FF1BE /* LoginView.swift */; };
+		E8B7FCE12F8098B7002FF1BE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCE02F8098B4002FF1BE /* LoginViewModel.swift */; };
+		E8B7FCE52F809965002FF1BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCE42F809925002FF1BE /* User.swift */; };
+		E8B7FCE62F80996C002FF1BE /* LocalStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCE22F8098F9002FF1BE /* LocalStorageService.swift */; };
+		E8B7FCEA2F80A23F002FF1BE /* Plano.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCE92F80A23D002FF1BE /* Plano.swift */; };
+		E8B7FCED2F80A9B8002FF1BE /* EventCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCEC2F80A9B1002FF1BE /* EventCardView.swift */; };
+		E8B7FCF02F810A1C002FF1BE /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCEF2F810A13002FF1BE /* AddEventView.swift */; };
+		E8B7FCF32F810BAE002FF1BE /* EventDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCF22F810BA8002FF1BE /* EventDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +50,15 @@
 		E8B7FCCB2F808F20002FF1BE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		E8B7FCCC2F808F63002FF1BE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E8B7FCCD2F808F7F002FF1BE /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		E8B7FCD82F80933C002FF1BE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		E8B7FCDE2F8098A3002FF1BE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E8B7FCE02F8098B4002FF1BE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E8B7FCE22F8098F9002FF1BE /* LocalStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageService.swift; sourceTree = "<group>"; };
+		E8B7FCE42F809925002FF1BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E8B7FCE92F80A23D002FF1BE /* Plano.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plano.swift; sourceTree = "<group>"; };
+		E8B7FCEC2F80A9B1002FF1BE /* EventCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardView.swift; sourceTree = "<group>"; };
+		E8B7FCEF2F810A13002FF1BE /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
+		E8B7FCF22F810BA8002FF1BE /* EventDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -89,6 +107,7 @@
 		E8B7FC8B2F7F9737002FF1BE = {
 			isa = PBXGroup;
 			children = (
+				E8B7FCE32F809917002FF1BE /* Models */,
 				E8B7FCC62F808E1A002FF1BE /* Services */,
 				E8B7FCC22F808DF1002FF1BE /* Views */,
 				E8B7FCC12F808DE7002FF1BE /* Features */,
@@ -137,8 +156,12 @@
 			isa = PBXGroup;
 			children = (
 				E8B7FCC72F808EF6002FF1BE /* MainTabView.swift */,
+				E8B7FCDD2F80988D002FF1BE /* Login */,
 				E8B7FCC82F808EFF002FF1BE /* Home */,
 				E8B7FCCA2F808F15002FF1BE /* Profile */,
+				E8B7FCD52F8092FC002FF1BE /* Search */,
+				E8B7FCF12F810B91002FF1BE /* Event */,
+				E8B7FCEB2F80A9A7002FF1BE /* Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -146,6 +169,7 @@
 		E8B7FCC62F808E1A002FF1BE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E8B7FCE22F8098F9002FF1BE /* LocalStorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -166,6 +190,49 @@
 				E8B7FCCB2F808F20002FF1BE /* ProfileView.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		E8B7FCD52F8092FC002FF1BE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E8B7FCD82F80933C002FF1BE /* SearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		E8B7FCDD2F80988D002FF1BE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E8B7FCE02F8098B4002FF1BE /* LoginViewModel.swift */,
+				E8B7FCDE2F8098A3002FF1BE /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E8B7FCE32F809917002FF1BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E8B7FCE92F80A23D002FF1BE /* Plano.swift */,
+				E8B7FCE42F809925002FF1BE /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E8B7FCEB2F80A9A7002FF1BE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E8B7FCEC2F80A9B1002FF1BE /* EventCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E8B7FCF12F810B91002FF1BE /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				E8B7FCF22F810BA8002FF1BE /* EventDetailsView.swift */,
+				E8B7FCEF2F810A13002FF1BE /* AddEventView.swift */,
+			);
+			path = Event;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,10 +379,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8B7FCEA2F80A23F002FF1BE /* Plano.swift in Sources */,
+				E8B7FCF32F810BAE002FF1BE /* EventDetailsView.swift in Sources */,
 				E8B7FCD12F809147002FF1BE /* HomeView.swift in Sources */,
+				E8B7FCF02F810A1C002FF1BE /* AddEventView.swift in Sources */,
+				E8B7FCE12F8098B7002FF1BE /* LoginViewModel.swift in Sources */,
 				E8B7FCD22F809156002FF1BE /* HomeViewModel.swift in Sources */,
+				E8B7FCD92F80933F002FF1BE /* SearchView.swift in Sources */,
 				E8B7FCD32F809186002FF1BE /* ProfileView.swift in Sources */,
 				E8B7FCD02F809111002FF1BE /* MainTabView.swift in Sources */,
+				E8B7FCED2F80A9B8002FF1BE /* EventCardView.swift in Sources */,
+				E8B7FCE52F809965002FF1BE /* User.swift in Sources */,
+				E8B7FCE62F80996C002FF1BE /* LocalStorageService.swift in Sources */,
+				E8B7FCDF2F8098A7002FF1BE /* LoginView.swift in Sources */,
 				E8B7FCD42F80918B002FF1BE /* ProfileViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

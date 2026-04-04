@@ -11,7 +11,7 @@ import SwiftUI
 struct PlanoApp: App {
     var body: some Scene {
         WindowGroup {
-            MainTabView()
+            AppRootView()
         }
     }
 }

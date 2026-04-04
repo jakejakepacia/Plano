@@ -6,6 +6,7 @@
 //
 import SwiftUI
 struct MainTabView: View {
+    @EnvironmentObject var vm: LoginViewModel
     var body: some View {
         TabView {
             Tab("Home", systemImage: "house") {
