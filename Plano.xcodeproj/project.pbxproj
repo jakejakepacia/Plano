@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E8B7FCD02F809111002FF1BE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCC72F808EF6002FF1BE /* MainTabView.swift */; };
+		E8B7FCD12F809147002FF1BE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCC92F808F0A002FF1BE /* HomeView.swift */; };
+		E8B7FCD22F809156002FF1BE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCCC2F808F63002FF1BE /* HomeViewModel.swift */; };
+		E8B7FCD32F809186002FF1BE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCCB2F808F20002FF1BE /* ProfileView.swift */; };
+		E8B7FCD42F80918B002FF1BE /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCCD2F808F7F002FF1BE /* ProfileViewModel.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		E8B7FCA22F7F9738002FF1BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -28,6 +36,11 @@
 		E8B7FCA12F7F9738002FF1BE /* PlanoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B7FCAB2F7F9738002FF1BE /* PlanoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B7FCC02F7F9D23002FF1BE /* ios-ci.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "ios-ci.yml"; sourceTree = "<group>"; };
+		E8B7FCC72F808EF6002FF1BE /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		E8B7FCC92F808F0A002FF1BE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E8B7FCCB2F808F20002FF1BE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E8B7FCCC2F808F63002FF1BE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E8B7FCCD2F808F7F002FF1BE /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -44,11 +57,6 @@
 		E8B7FCAE2F7F9738002FF1BE /* PlanoUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = PlanoUITests;
-			sourceTree = "<group>";
-		};
-		E8B7FCC32F808DFE002FF1BE /* ViewModels */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -82,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				E8B7FCC62F808E1A002FF1BE /* Services */,
-				E8B7FCC32F808DFE002FF1BE /* ViewModels */,
 				E8B7FCC22F808DF1002FF1BE /* Views */,
 				E8B7FCC12F808DE7002FF1BE /* Features */,
 				E8B7FCBE2F7F9D11002FF1BE /* .github */,
@@ -129,6 +136,9 @@
 		E8B7FCC22F808DF1002FF1BE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E8B7FCC72F808EF6002FF1BE /* MainTabView.swift */,
+				E8B7FCC82F808EFF002FF1BE /* Home */,
+				E8B7FCCA2F808F15002FF1BE /* Profile */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -138,6 +148,24 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E8B7FCC82F808EFF002FF1BE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E8B7FCCC2F808F63002FF1BE /* HomeViewModel.swift */,
+				E8B7FCC92F808F0A002FF1BE /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E8B7FCCA2F808F15002FF1BE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E8B7FCCD2F808F7F002FF1BE /* ProfileViewModel.swift */,
+				E8B7FCCB2F808F20002FF1BE /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,7 +185,6 @@
 			);
 			fileSystemSynchronizedGroups = (
 				E8B7FC962F7F9737002FF1BE /* Plano */,
-				E8B7FCC32F808DFE002FF1BE /* ViewModels */,
 			);
 			name = Plano;
 			packageProductDependencies = (
@@ -285,6 +312,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8B7FCD12F809147002FF1BE /* HomeView.swift in Sources */,
+				E8B7FCD22F809156002FF1BE /* HomeViewModel.swift in Sources */,
+				E8B7FCD32F809186002FF1BE /* ProfileView.swift in Sources */,
+				E8B7FCD02F809111002FF1BE /* MainTabView.swift in Sources */,
+				E8B7FCD42F80918B002FF1BE /* ProfileViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
