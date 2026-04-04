@@ -46,6 +46,11 @@
 			path = PlanoUITests;
 			sourceTree = "<group>";
 		};
+		E8B7FCC32F808DFE002FF1BE /* ViewModels */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +81,10 @@
 		E8B7FC8B2F7F9737002FF1BE = {
 			isa = PBXGroup;
 			children = (
+				E8B7FCC62F808E1A002FF1BE /* Services */,
+				E8B7FCC32F808DFE002FF1BE /* ViewModels */,
+				E8B7FCC22F808DF1002FF1BE /* Views */,
+				E8B7FCC12F808DE7002FF1BE /* Features */,
 				E8B7FCBE2F7F9D11002FF1BE /* .github */,
 				E8B7FC962F7F9737002FF1BE /* Plano */,
 				E8B7FCA42F7F9738002FF1BE /* PlanoTests */,
@@ -110,6 +119,27 @@
 			path = workflows;
 			sourceTree = "<group>";
 		};
+		E8B7FCC12F808DE7002FF1BE /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		E8B7FCC22F808DF1002FF1BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E8B7FCC62F808E1A002FF1BE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,6 +157,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				E8B7FC962F7F9737002FF1BE /* Plano */,
+				E8B7FCC32F808DFE002FF1BE /* ViewModels */,
 			);
 			name = Plano;
 			packageProductDependencies = (
