@@ -13,6 +13,7 @@ struct AddEventView: View {
 
     @State private var name = ""
     @State private var description = ""
+    @State private var budget = ""
     @State private var startDate = Date()
     @State private var endDate = Date()
 
@@ -24,6 +25,7 @@ struct AddEventView: View {
             TextField("Description", text: $description)
                 .textFieldStyle(.roundedBorder)
 
+            TextField("Budget", text: $budget)
             DatePicker("Start Date", selection: $startDate)
             DatePicker("End Date", selection: $endDate)
 
@@ -33,7 +35,8 @@ struct AddEventView: View {
                     name: name,
                     description: description,
                     startDate: startDate,
-                    endDate: endDate
+                    endDate: endDate,
+                    budget: Double(budget) ?? 0.0
                 )
 
                 vm.saveEvents(newEvent)

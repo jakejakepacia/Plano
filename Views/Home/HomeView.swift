@@ -11,34 +11,33 @@ struct HomeView: View {
     @State private var selectedEvent: PlanoEvent?
     
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                LazyVStack(spacing: 16) {
-                    ForEach(vm.events) { event in
-                        NavigationLink {
-                            EventDetailsView(event: event)
-                                .toolbar(.hidden, for: .tabBar)
-                        } label: {
-                            EventCardView(event: event)
-                        }
-                        .buttonStyle(.plain) // removes default blue highlight
-                        .padding(.horizontal)
+        ScrollView {
+            LazyVStack(spacing: 16) {
+                ForEach(vm.events) { event in
+                    NavigationLink {
+                        EventDetailsView(event: event)
+                            .toolbar(.hidden, for: .tabBar)
+                            .navigationBarTitleDisplayMode(.inline)
+                    } label: {
+                        EventCardView(event: event)
                     }
-                }
-                .padding(.top)
-            }
-            .navigationTitle("Events")
-            .toolbar {
-                Button {
-                    showAddEvent = true
-                } label: {
-                    Image(systemName: "plus")
+                    .buttonStyle(.plain) // removes default blue highlight
+                    .padding(.horizontal)
                 }
             }
-            .sheet(isPresented: $showAddEvent) {
-                NavigationStack {
-                    AddEventView(vm: vm)
-                }
+            .padding(.top)
+        }
+        .navigationTitle("Events")
+        .toolbar {
+            Button {
+                showAddEvent = true
+            } label: {
+                Image(systemName: "plus")
+            }
+        }
+        .sheet(isPresented: $showAddEvent) {
+            NavigationStack {
+                AddEventView(vm: vm)
             }
         }
     }
