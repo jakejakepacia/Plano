@@ -11,6 +11,7 @@
 		E883E35A2F8A3824000D1D6C /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883E3592F8A3819000D1D6C /* CircularProgressView.swift */; };
 		E883E35C2F8B755D000D1D6C /* BudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883E35B2F8B7551000D1D6C /* BudgetView.swift */; };
 		E883E35E2F8C5357000D1D6C /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883E35D2F8C5352000D1D6C /* AddExpenseView.swift */; };
+		E883E3612F8C5B8F000D1D6C /* AddCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883E3602F8C5B8A000D1D6C /* AddCategoryView.swift */; };
 		E8B7FCD02F809111002FF1BE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCC72F808EF6002FF1BE /* MainTabView.swift */; };
 		E8B7FCD12F809147002FF1BE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCC92F808F0A002FF1BE /* HomeView.swift */; };
 		E8B7FCD22F809156002FF1BE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B7FCCC2F808F63002FF1BE /* HomeViewModel.swift */; };
@@ -49,6 +50,7 @@
 		E883E3592F8A3819000D1D6C /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		E883E35B2F8B7551000D1D6C /* BudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetView.swift; sourceTree = "<group>"; };
 		E883E35D2F8C5352000D1D6C /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
+		E883E3602F8C5B8A000D1D6C /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
 		E8B7FC942F7F9737002FF1BE /* Plano.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plano.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B7FCA12F7F9738002FF1BE /* PlanoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B7FCAB2F7F9738002FF1BE /* PlanoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +117,7 @@
 		E883E35F2F8C535B000D1D6C /* Budget */ = {
 			isa = PBXGroup;
 			children = (
+				E883E3602F8C5B8A000D1D6C /* AddCategoryView.swift */,
 				E883E35D2F8C5352000D1D6C /* AddExpenseView.swift */,
 				E883E35B2F8B7551000D1D6C /* BudgetView.swift */,
 			);
@@ -416,6 +419,7 @@
 				E8B7FCE62F80996C002FF1BE /* LocalStorageService.swift in Sources */,
 				E883E35E2F8C5357000D1D6C /* AddExpenseView.swift in Sources */,
 				E8B7FCDF2F8098A7002FF1BE /* LoginView.swift in Sources */,
+				E883E3612F8C5B8F000D1D6C /* AddCategoryView.swift in Sources */,
 				E8B7FCD42F80918B002FF1BE /* ProfileViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

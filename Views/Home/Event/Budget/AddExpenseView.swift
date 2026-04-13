@@ -7,7 +7,9 @@
 import SwiftUI
 
 struct AddExpenseView: View {
+    var expense: PlanoCard?
+    
     var body: some View {
-        Text("Hello, World!")
+        Text("Hello, World! \(expense?.name ?? "No Expense")")
     }
 }

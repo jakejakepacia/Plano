@@ -10,6 +10,7 @@ import SwiftUI
 struct BudgetView: View {
     
     @State private var showAddExpense = false
+    @State private var planoCard: PlanoCard?
     
     var event : PlanoEvent
     let columns = [
@@ -19,81 +20,75 @@ struct BudgetView: View {
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
-            
+
             ScrollView {
-                VStack {
-                    // MARK: Grid
-                    LazyVGrid(columns: columns, spacing: 12) {
-                        ForEach(event.planoCards ?? [], id: \.id) { item in
-                            
-                            VStack(alignment: .leading, spacing: 6) {
-                                Text(item.name)
-                                    .font(.headline)
-                                
-                                Text(item.description)
-                                    .font(.caption)
-                                    .foregroundColor(.secondary)
-                                    .lineLimit(2)
-                                
-                                HStack {
-                                    VStack(alignment: .leading) {
-                                        Text("Budget")
-                                            .font(.caption)
-                                            .bold()
-                                        Text("$\(item.budget, specifier: "%.2f")")
-                                            .font(.caption)
-                                            .foregroundColor(.secondary)
-                                        
-                                        Text("Spent")
-                                            .font(.caption)
-                                            .bold()
-                                        Text("$\(item.spent, specifier: "%.2f")")
-                                            .font(.caption)
-                                            .foregroundColor(.secondary)
-                                    }
-                                    
-                                    Spacer()
-                                    
-                                    let progress = item.spent / item.budget
-                                    CircularProgressView(progress: progress)
+                LazyVGrid(columns: columns, spacing: 12) {
+
+                    ForEach(event.planoCards ?? [], id: \.id) { item in
+
+                        VStack(alignment: .leading, spacing: 6) {
+
+                            Text(item.name)
+                                .font(.headline)
+
+                            Text(item.description)
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                                .lineLimit(2)
+
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text("Budget").bold()
+                                        .font(.caption)
+                                    Text("$\(item.budget, specifier: "%.2f")")
+                                        .font(.caption)
+
+                                    Text("Spent").bold()
+                                        .font(.caption)
+                                    Text("$\(item.spent, specifier: "%.2f")")
+                                        .font(.caption)
                                 }
-                                
-                                Button("Add Expense") {
-                                    showAddExpense = true
-                                }
-                                .sheet(isPresented: $showAddExpense) {
-                                    AddExpenseView()
-                                        .presentationDetents([.medium, .large])
-                                }
+
+                                Spacer()
+
+                                let progress = item.budget > 0 ? item.spent / item.budget : 0
+                                CircularProgressView(progress: progress)
                             }
-                            .frame(maxWidth: .infinity, minHeight: 120, alignment: .leading)
-                            .cardStyle()
+
+                            Button("Add Expense") {
+                                planoCard = item
+                            }
                         }
+                        .frame(maxWidth: .infinity, minHeight: 120, alignment: .leading)
+                        .cardStyle()
                     }
                 }
                 .padding()
             }
 
-            // ✅ Floating button
-            Button(action: {
+            Button {
                 showAddExpense = true
-                print("Tapped")
-            }) {
+            } label: {
                 Image(systemName: "plus")
                     .font(.system(size: 24))
                     .padding(20)
                     .background(Color.blue)
                     .foregroundColor(.white)
                     .clipShape(Circle())
-                    .shadow(radius: 4)
-            }
-            .sheet(isPresented: $showAddExpense){
-                AddExpenseView()
-                    .presentationDetents([.medium, .large])
             }
             .padding()
         }
-        .navigationTitle("Track Budget")
-        .background(Color(.systemGroupedBackground))
+
+        // ✅ SINGLE sheet for selected item
+        .sheet(item: $planoCard) { item in
+            AddExpenseView(expense: item)
+                .presentationDetents([.medium, .large])
+        }
+
+        // ✅ second sheet for add category
+        .sheet(isPresented: $showAddExpense) {
+            AddCategoryView()
+                .presentationDetents([.medium, .large])
+        }
     }
 }
